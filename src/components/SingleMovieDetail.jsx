@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import useFetchApi from '../Hooks/UseFetchApi';
+import useFetchApi from '../hooks/UseFetchApi';
 import MovieContext from '../MovieContext';
 
 const SingleMovieDetail = () => {

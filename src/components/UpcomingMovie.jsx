@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import useFetchApi from '../Hooks/UseFetchApi';
+import useFetchApi from '../hooks/UseFetchApi';
 import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
 import Movie from './movie';
