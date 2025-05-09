@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
-import Movie from './movie.jsx';
 import { Link } from 'react-router-dom';
 import { useContext } from 'react';
 import MovieContext from '../MovieContext.js';
 import useFetchnew from '../hooks/useFetchnew.js';
+import Movie from './movie.jsx';
 
 const Popular = () => {
   const [count, setCount] = useState(1);
