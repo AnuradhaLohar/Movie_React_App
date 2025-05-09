@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
-import useFetchApi from '../hooks/UseFetchApi';
 import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
 import Movie from './movie';
 import { Link } from 'react-router-dom';
 import MovieContext from '../MovieContext';
 import { useContext } from 'react';
+import useFetchnew from '../hooks/useFetchnew';
 const TopRatedMovie = () => {
 
    const [count, setCount] = useState(1)
@@ -13,7 +13,7 @@ const TopRatedMovie = () => {
   const apiKey = 'c45a857c193f6302f2b5061c3b85e743';
   const url = `https://api.themoviedb.org/3/movie/top_rated?api_key=c45a857c193f6302f2b5061c3b85e743&language=en-US&${count}`;
 
-  const { data, error, loading } = useFetchApi(url);
+  const { data, error, loading } = useFetchnew(url);
 
   const {movieId, setMovieId} = useContext(MovieContext)
 

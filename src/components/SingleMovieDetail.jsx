@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import useFetchApi from '../hooks/UseFetchApi';
+import useFetchnew from '../hooks/useFetchnew';
 import MovieContext from '../MovieContext';
 
 const SingleMovieDetail = () => {
@@ -9,8 +9,8 @@ const SingleMovieDetail = () => {
   const movieUrl = `https://api.themoviedb.org/3/movie/${movieId}?api_key=${Api_Key}&language=en-US`;
   const creditsUrl = `https://api.themoviedb.org/3/movie/${movieId}/credits?api_key=${Api_Key}&language=en-US`;
 
-  const { data: movie, loading: movieLoading } = useFetchApi(movieUrl);
-  const { data: credits, loading: creditsLoading } = useFetchApi(creditsUrl);
+  const { data: movie, loading: movieLoading } = useFetchnew(movieUrl);
+  const { data: credits, loading: creditsLoading } = useFetchnew(creditsUrl);
 
   if (movieLoading || creditsLoading || !movie || !credits) {
     return <div className="text-center text-white py-10">Loading...</div>;

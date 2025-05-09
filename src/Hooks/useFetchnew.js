@@ -1,5 +1,7 @@
-import axios from "axios";
-import { useState, useEffect } from "react";
+import axios from 'axios';
+import React from 'react'
+import { useEffect } from 'react';
+import { useState } from 'react';
 
 const useFetchnew = (url) => {
     const [data, setData] = useState(null);
@@ -22,6 +24,6 @@ const useFetchnew = (url) => {
     }, [url]);
 
     return { data, error, loading };
-};
+}
 
-export default useFetchnew;
+export default useFetchnew
